@@ -19,15 +19,16 @@ const ListTodosComponent = () => {
     { id: 3, description: "Learn DevOps", done: false, targetDate: targetDate },
   ];
   return (
-    <div>
+    <div className="container">
       <h1>Things You Want To Do!</h1>
       <div>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <td>Id</td>
               <td>Description</td>
               <td>Is Done?</td>
+              <td>Target Date</td>
             </tr>
           </thead>
           <tbody>
