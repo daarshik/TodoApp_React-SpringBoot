@@ -19,9 +19,9 @@ function LoginComponent() {
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (authContext.login(username, password)) {
+    if (await authContext.login(username, password)) {
       setShowErrorMessage(false);
       navigate(`/welcome/${username} `);
     } else {
